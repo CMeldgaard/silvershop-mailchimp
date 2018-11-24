@@ -1,0 +1,19 @@
+---
+name: silvershop-mailchimp
+---
+
+SilverShop\Mailchimp\Connector:
+  APIKey: '0adffbc8362aeb6039dbb060a15296e8-us14'
+  ListId: 'e310445532'
+
+Order:
+  extensions:
+    - Silvershop\Mailchimp\Dataextensions\MailchimpOrder
+
+Page:
+  extensions:
+    - SilverShop\Mailchimp\Dataextensions\MailchimpPage
+
+Siteconfig:
+  extensions:
+    - SilverShop\Mailchimp\Dataextensions\MailchimpSiteConfig

@@ -1,0 +1,19 @@
+{
+	"name": "lundco/silvershop-mailchomp",
+	"description": "Adds Mailchimp integration into Silvershop.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "silvershop", "ecommerce","webshipper"],
+	"license": "BSD-2-Clause",
+	"authors": [{
+		"name": "Lun&co",
+		"email": "info@lund-co.dk"
+	}],
+	"extra": {
+		"installer-name": "silvershop-mailchimp"
+	},
+	"require": {
+		"silvershop/core": ">=2.0.1",
+		"silverstripe/cms": "~3.1",
+		"guzzlehttp/guzzle": "^6.3"
+	}
+}
