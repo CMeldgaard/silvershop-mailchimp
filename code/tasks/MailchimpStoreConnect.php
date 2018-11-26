@@ -8,21 +8,15 @@ class MailchimpStoreConnect extends \BuildTask
 {
 	public function run($request)
 	{
-		// TODO: Implement run() method.
-
 		//Create store
 		$connect = Connector::create()->connectStore();
 
-		echo '<pre>';
-		print_r($connect);
-		echo '</pre>';
+		if ($connect) {
+			//Sync products
+			$syncProducts = Connector::create()->syncProducts();
 
-		//Sync products
-
-
-		//Sync orders
-
-
-		//Set is_syncing to false
+			//Sync orders
+			$syncOrders = Connector::create()->syncOrders();
+		}
 	}
 }

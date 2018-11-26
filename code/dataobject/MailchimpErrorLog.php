@@ -1,9 +1,11 @@
 <?php
 
-class MailchimpErrorLog extends DataObject
+namespace SilverShop\Mailchimp\Dataobjects;
+
+class MailchimpErrorLog extends \DataObject
 {
 	private static $db = array(
-		'ErrorTime'     => 'DateTime',
+		'ErrorTime'     => 'Date',
 		'ErrorMessage'  => 'Text',
 		'ErrorFunction' => 'Varchar'
 	);
