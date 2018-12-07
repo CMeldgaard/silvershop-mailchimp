@@ -8,7 +8,6 @@ class MailchimpSync extends \BuildTask
 {
 	public function run($request)
 	{
-
 		//Sync products thats new or waiting to be synced. Products are always synced first to prevent error
 		//from missing order products
 		$syncProducts = Connector::create()->syncProducts();

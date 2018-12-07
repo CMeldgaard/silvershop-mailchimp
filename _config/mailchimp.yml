@@ -11,9 +11,9 @@ Product:
   extensions:
     - SilverShop\Mailchimp\Dataextensions\MailchimpProduct
 
-Page:
+Page_Controller:
   extensions:
-    - SilverShop\Mailchimp\Dataextensions\MailchimpPage
+    - SilverShop\Mailchimp\Dataextensions\MailchimpPageController
 
 Siteconfig:
   extensions:

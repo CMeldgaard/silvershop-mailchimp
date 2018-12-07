@@ -158,7 +158,7 @@ class Connector extends \Object
 					'json' => [
 						'id'                   => (string)$order->ID,
 						'customer'             => [
-							'id'            => md5(strtolower($order->Email)),
+							'id'            => $this->getCustomerID($order),
 							'email_address' => $order->Email,
 							'company'       => (string)$order->CompanyName,
 							'first_name'    => $order->FirstName,
@@ -171,7 +171,11 @@ class Connector extends \Object
 						'lines'                => $this->getOrderLines($order),
 						'processed_at_foreign' => $ordertime,
 						'updated_at_foreign'   => $updated,
-						'cancelled_at_foreihn' => $cancelled
+						'cancelled_at_foreihn' => $cancelled,
+						'tracking_code'        => (string)$order->MailchimpTC,
+						'outreach'             => [
+							'id' => (string)$order->MailchimpCID
+						]
 					]
 				]);
 			}catch (BadResponseException $e){
@@ -245,6 +249,27 @@ class Connector extends \Object
 		}
 
 		return $lines;
+	}
+
+	public function getCustomerID($order)
+	{
+		if ($order->MailchimpEID) {
+			try{
+				$request = $this->client->request('GET',
+					'lists/' . $this->listID . '/members?unique_email_id=' . $order->MailchimpEID);
+			}catch (BadResponseException $e){
+
+				return md5(strtolower($order->Email));
+
+			}
+
+			$decoded = \GuzzleHttp\json_decode($request->getBody()->getContents());
+
+			return $decoded['id'];
+
+		}else {
+			return md5(strtolower($order->Email));
+		}
 	}
 
 }

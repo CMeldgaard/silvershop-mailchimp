@@ -2,14 +2,13 @@
 
 namespace SilverShop\Mailchimp\Dataextensions;
 
-class MailchimpPage extends \DataExtension
+class MailchimpPageController extends \DataExtension
 {
-	public function init(){
+	public function OnAfterInit(){
 
-		parent::init();
+		\Session::set('MailchimpEID',\Controller::curr()->getRequest()->getVar('mc_eid'));
+		\Session::set('MailchimpCID',\Controller::curr()->getRequest()->getVar('mc_cid'));
+		\Session::set('MailchimpTC',\Controller::curr()->getRequest()->getVar('mc_tc'));
 
-		//TODO Check for mc_eid in URL and store in session
-
-		//TODO Check for mc_cid in URL and store in session
 	}
 }

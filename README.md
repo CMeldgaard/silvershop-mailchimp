@@ -1,10 +1,16 @@
-# Silvershop Mailchimp
+# SilverShop Mailchimp integration
 
-**(Work in progres)**
+Adds integration to Mailchimp API v3 eCommerce. **(Work in progres)**
 
-Syncs Silvershop orders with Mailchimp.
+[![Latest Stable Version](https://poser.pugx.org/lundco/silvershop-mailchimp/v/stable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
+[![Latest Unstable Version](https://poser.pugx.org/lundco/silvershop-mailchimp/v/unstable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
+[![License](https://poser.pugx.org/lundco/silvershop-mailchimp/license)](https://packagist.org/packages/lundco/silvershop-mailchimp)
 
-On first initialization run the task MailchimpStoreConnect to create a Store in Mailchimp. Also set up a cron-job that runs the task MailchimpSync.
+## Installation
+
+composer require "lundco/silvershop-mailchimp"
+
+In your project YML-file, create the following (replacing XXX with your own data):
 
 ```
 SilverShop\Mailchimp\Connector:
@@ -14,8 +20,14 @@ SilverShop\Mailchimp\Connector:
   StoreId: 'XXX'
 ```
 
-Feel free to contribute the project and send PR's.
+After installing the module, rebuild the database and create a store in MailChimp by running the task `MailchimpStoreConnect`.
+
+### Cronjobs
+To sync orders/products from Silvershop to Mailchimp make sure you setup a cronjob to run the `MailchimpSync` task.
 
 ##Todo
 * Mark orders that was created by a Mailchimp campaign
 * Make it possible to signup to newsletter on checkout, and send data to Mailchimp with eCommerce data
+* Update to Silverstripe 4
+
+Feel free to contribute to the project and send PR's.
