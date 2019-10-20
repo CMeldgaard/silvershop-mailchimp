@@ -1,5 +1,5 @@
 {
-	"name": "lundco/silvershop-mailchimp",
+	"name": "meldgaard/silvershop-mailchimp",
 	"description": "Adds Mailchimp eCommerce integration into Silvershop.",
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "silvershop", "ecommerce","mailchimp"],
