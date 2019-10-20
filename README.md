@@ -2,13 +2,13 @@
 
 Adds integration to Mailchimp API v3 eCommerce. **(Work in progres)**
 
-[![Latest Stable Version](https://poser.pugx.org/lundco/silvershop-mailchimp/v/stable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
-[![Latest Unstable Version](https://poser.pugx.org/lundco/silvershop-mailchimp/v/unstable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
-[![License](https://poser.pugx.org/lundco/silvershop-mailchimp/license)](https://packagist.org/packages/lundco/silvershop-mailchimp)
+[![Latest Stable Version](https://poser.pugx.org/meldgaard/silvershop-mailchimp/v/stable)](https://packagist.org/packages/meldgaard/silvershop-mailchimp)
+[![Latest Unstable Version](https://poser.pugx.org/meldgaard/silvershop-mailchimp/v/unstable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
+[![License](https://poser.pugx.org/meldgaard/silvershop-mailchimp/license)](https://packagist.org/packages/lundco/silvershop-mailchimp)
 
 ## Installation
 
-composer require "lundco/silvershop-mailchimp"
+composer require "meldgaard/silvershop-mailchimp"
 
 In your project YML-file, create the following (replacing XXX with your own data):
 
