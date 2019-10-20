@@ -5,8 +5,7 @@
 	"keywords": ["silverstripe", "silvershop", "ecommerce","mailchimp"],
 	"license": "BSD-3-Clause",
 	"authors": [{
-		"name": "Lun&co",
-		"email": "info@lund-co.dk"
+		"name": "Carsten Meldgaard"
 	}],
 	"extra": {
 		"installer-name": "silvershop-mailchimp"
