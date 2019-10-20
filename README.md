@@ -3,8 +3,8 @@
 Adds integration to Mailchimp API v3 eCommerce. **(Work in progres)**
 
 [![Latest Stable Version](https://poser.pugx.org/meldgaard/silvershop-mailchimp/v/stable)](https://packagist.org/packages/meldgaard/silvershop-mailchimp)
-[![Latest Unstable Version](https://poser.pugx.org/meldgaard/silvershop-mailchimp/v/unstable)](https://packagist.org/packages/lundco/silvershop-mailchimp)
-[![License](https://poser.pugx.org/meldgaard/silvershop-mailchimp/license)](https://packagist.org/packages/lundco/silvershop-mailchimp)
+[![Latest Unstable Version](https://poser.pugx.org/meldgaard/silvershop-mailchimp/v/unstable)](https://packagist.org/packages/meldgaard/silvershop-mailchimp)
+[![License](https://poser.pugx.org/meldgaard/silvershop-mailchimp/license)](https://packagist.org/packages/meldgaard/silvershop-mailchimp)
 
 ## Installation
 
